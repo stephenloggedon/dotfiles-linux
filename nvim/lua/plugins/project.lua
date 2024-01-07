@@ -4,7 +4,7 @@ return {
     opts = {
       last_session_on_startup = false,
       projects = {
-        "~/sources/exercism/*",
+        "~/sources/exercism/**",
       },
     },
     init = function()

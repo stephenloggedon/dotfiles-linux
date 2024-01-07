@@ -5,7 +5,7 @@ return {
       {
         "<leader>bd",
         function()
-          local bd = require("mini.bufremove").delete
+          local bd = require("bufdelete").bufdelete
           if vim.bo.modified then
             local choice = vim.fn.confirm(("Save changes to %q?"):format(vim.fn.bufname()), "&Yes\n&No\n&Cancel")
             if choice == 1 then -- Yes
@@ -21,7 +21,7 @@ return {
         desc = "Delete Buffer",
       },
     -- stylua: ignore
-    { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
+    { "<leader>bD", function() require("bufdelete").bufdelete(0, true) end, desc = "Delete Buffer (Force)" },
     },
   },
 }
